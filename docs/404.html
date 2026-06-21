@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Page not found</title>
 </head>
-
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <script>
-    console.log("script");
     const path = window.location.pathname;
-    console.log("path = " + path);
-    const prefix = "/@apps/";
-    const prefLen = prefix.length;
-    if (path.startsWith(prefix)) {
+    const appsPrefix = "/@apps/";
+    if (path.startsWith(appsPrefix)) {
+        const prefLen = appsPrefix.length;
         const end = path.indexOf("/", prefLen);
         if (end > prefLen) {
             const app = path.substring(prefLen, end);
@@ -21,6 +17,6 @@
         }
     }
 </script>
+<p>Page not found</p>
 </body>
-
 </html>
