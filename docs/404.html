@@ -13,7 +13,7 @@
         const end = path.indexOf("/", prefLen);
         if (end > prefLen) {
             const app = path.substring(prefLen, end);
-            window.location.path = appsPrefix + app;
+            window.location = appsPrefix + app;
         }
     }
 </script>
